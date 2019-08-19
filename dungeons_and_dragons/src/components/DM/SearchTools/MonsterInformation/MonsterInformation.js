@@ -1,6 +1,15 @@
-import React, { Component } from "reactn";
+import React, { Component, setGlobal } from "reactn";
+import Button from "@material-ui/core/Button";
+
+let currentMonsters = [];
 
 export default class MonsterInformation extends Component {
+  addMonster = () => {
+    let myMonster = this.global.monsterData;
+    currentMonsters.push(myMonster);
+    setGlobal({ currentMonsters });
+  };
+
   render() {
     return (
       <>
@@ -73,6 +82,9 @@ export default class MonsterInformation extends Component {
               ))
             : ""}
         </div>
+        <Button variant="contained" onClick={this.addMonster}>
+          Add Monster
+        </Button>
       </>
     );
   }

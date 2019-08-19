@@ -7,7 +7,9 @@ import addReactNDevTools from "reactn-devtools";
 addReactNDevTools();
 
 setGlobal({
-  monsterData: {}
+  monsterData: {},
+  spellData: {},
+  currentMonsters: []
 });
 
 ReactDOM.render(<App />, document.getElementById("root"));
