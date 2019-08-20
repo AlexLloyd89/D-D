@@ -1,13 +1,11 @@
 import React from "reactn";
-import SearchContainer from "./components/DM/SearchTools/SearchContainer/SearchContainer";
 import "./App.css";
-import CurrentEnemies from "./components/DM/BattleTools/CurrentEnemies";
+import Gameboard from "./components/Board/Gameboard/Gameboard";
 
 function App() {
   return (
     <div className="App">
-      <SearchContainer />
-      <CurrentEnemies />
+      <Gameboard />
     </div>
   );
 }

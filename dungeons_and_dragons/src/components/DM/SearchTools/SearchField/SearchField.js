@@ -80,10 +80,12 @@ export default class SearchField extends Component {
   render() {
     return (
       <>
-        <div>
+        <div style={{ display: "flex" }}>
           <Select
+            style={{ width: 92 }}
             value={this.state.type}
             onChange={this.handleChange}
+            variant="filled"
             inputProps={{
               name: "type",
               id: "type"
@@ -95,6 +97,7 @@ export default class SearchField extends Component {
           <CssTextField
             id="custom-css-standard-input"
             label="Query..."
+            variant="filled"
             name="monster"
             onChange={this.handleChange}
             value={this.state.monster}
@@ -103,7 +106,6 @@ export default class SearchField extends Component {
             Search
           </Button>
         </div>
-        <div />
       </>
     );
   }
